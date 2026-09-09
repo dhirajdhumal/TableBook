@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid mx-3">
+            <!-- Navbar Logo & Name  -->
+            <a class="navbar-brand fw-bold fs-3" href="index.html"> <i class="bi bi-calendar-check-fill"></i> TableBook
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span> </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="hotels.html">Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="myBookingsLink" class="nav-link" href="my-bookings.html">My Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mb-2 mb-lg-0 mt-lg-0"> <a id="authButton" href="login.html"
+                            class="btn btn-secondary">
+
+                            <i class="bi bi-person-fill"></i>
+                            Login
+
+                        </a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar section end -->
+
+
+
+    <!-- Hotels Header -->
+    <section class="py-5 bg-light">
+
+        <div class="container text-center">
+
+            <h1 class="fw-bold display-5">
+                Explore Hotels
+            </h1>
+
+            <p class="text-muted lead">
+                Discover the best hotels and reserve your table
+                before you arrive.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Hotel Search Section -->
+    <section class="py-4">
+
+        <div class="container">
+
+            <div class="card shadow-sm border-0">
+
+                <div class="card-body p-4">
+
+                    <div class="row g-3 align-items-end">
+
+                        <!-- Location -->
+                        <div class="col-md-6 col-lg-3">
+
+                            <label class="form-label fw-semibold">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                Location
+                            </label>
+
+                            <select id="locationFilter" class="form-select">
+                                <option value="all" selected>All Locations</option>
+                                <option value="Koregaon Park">Koregaon Park</option>
+                                <option value="Baner">Baner</option>
+                                <option value="Viman Nagar">Viman Nagar</option>
+                                <option value="Hinjewadi">Hinjewadi</option>
+                                <option value="Kalyani Nagar">Kalyani Nagar</option>
+                                <option value="Wakad">Wakad</option>
+                            </select>
+
+                        </div>
+
+
+                        <!-- Cuisine -->
+                        <div class="col-md-6 col-lg-3">
+
+                            <label class="form-label fw-semibold">
+                                <i class="bi bi-egg-fried"></i>
+                                Cuisine
+                            </label>
+
+                            <select id="cuisineFilter" class="form-select">
+                                <option value="all" selected>All Cuisines</option>
+                                <option value="Indian">Indian</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="Continental">Continental</option>
+                                <option value="Italian">Italian</option>
+                            </select>
+
+                        </div>
+
+
+                        <!-- Rating -->
+                        <div class="col-md-6 col-lg-3">
+
+                            <label class="form-label fw-semibold">
+                                <i class="bi bi-star-fill"></i>
+                                Rating
+                            </label>
+
+                            <select id="ratingFilter" class="form-select">
+                                <option value="all" selected>Any Rating</option>
+                                <option value="4.5">4.5 & Above</option>
+                                <option value="4.0">4.0 & Above</option>
+                                <option value="3.5">3.5 & Above</option>
+                                <option value="3.0">3.0 & Above</option>
+                            </select>
+
+                        </div>
+
+
+                        <!-- Search Button -->
+                        <div class="col-md-6 col-lg-3">
+
+                            <button id="searchBtn" type="button" class="btn btn-primary w-100">
+
+                                <i class="bi bi-search"></i>
+                                Search Hotels
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- Hotel List -->
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- Result Count -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+
+                    <h5 class="fw-bold mb-0">
+                        Available Hotels
+                    </h5>
+
+                    <span id="hotelCount" class="badge text-bg-primary">
+                        6 Hotels
+                    </span>
+
+                </div>
+
+                <!-- Hotels will be dynamically loaded here -->
+                <div id="hotelsContainer" class="row g-4">
+                    <!-- Hotels will be added by JavaScript -->
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- Brand -->
+                <div class="col-md-6 col-lg-4">
+
+                    <h4 class="fw-bold">
+                        <i class="bi bi-calendar-check-fill text-white"></i>
+                        TableBook
+                    </h4>
+
+                    <p class="text-secondary">
+                        Book your table before you arrive and
+                        enjoy a hassle-free dining experience.
+                    </p>
+
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="col-md-6 col-lg-4">
+
+                    <h5 class="fw-bold">
+                        Quick Links
+                    </h5>
+
+                    <ul class="list-unstyled">
+
+                        <li class="mb-2">
+                            <a href="index.html" class="text-secondary text-decoration-none">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="hotels.html" class="text-secondary text-decoration-none">
+                                Hotels
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="my-bookings.html" class="text-secondary text-decoration-none">
+                                My Bookings
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="about.html" class="text-secondary text-decoration-none">
+                                About
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Contact -->
+                <div class="col-md-6 col-lg-4">
+
+                    <h5 class="fw-bold">
+                        Contact Us
+                    </h5>
+
+                    <p class="text-secondary mb-2">
+                        <i class="bi bi-envelope-fill"></i>
+                        support@tablebook.com
+                    </p>
+
+                    <p class="text-secondary mb-2">
+                        <i class="bi bi-telephone-fill"></i>
+                        +91 98765 43210
+                    </p>
+
+                    <p class="text-secondary">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        Pune, Maharashtra
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <hr class="border-secondary my-4">
+
+
+            <!-- Copyright -->
+
+            <div class="text-center text-secondary">
+
+                <p class="mb-0">
+                    © 2026 TableBook. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/hotels.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

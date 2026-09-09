@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid mx-3">
+            <!-- Navbar Logo & Name  -->
+            <a class="navbar-brand fw-bold fs-3" href="index.html"> <i class="bi bi-calendar-check-fill"></i> TableBook
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span> </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotels.html">Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="myBookingsLink" class="nav-link" href="my-bookings.html">My Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mb-2 mb-lg-0 mt-lg-0"> <a id="authButton" href="login.html"
+                            class="btn btn-secondary">
+
+                            <i class="bi bi-person-fill"></i>
+                            Login
+
+                        </a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar section end -->
+
+
+
+    <!-- Hero Carousel -->
+    <section class="p-4">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"> </button>
+
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2">
+                </button>
+
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3">
+                </button>
+            </div>
+
+            <!-- Carousel Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="bg-dark text-white">
+                        <div class="container py-5">
+                            <div class="px-5 row align-items-center text-center text-lg-start">
+                                <div class="col-lg-8"> <span class="badge bg-light text-dark fs-6 mb-3"> <i
+                                            class="bi bi-calendar-check"></i> Smart Table Reservation </span>
+                                    <h1 class="display-3 fw-bold"> Book Your Table <br> Before You Arrive </h1>
+                                    <p class="lead mt-3"> Skip the long waiting time. Reserve your table at your
+                                        favorite
+                                        hotel in advance. </p> <a href="hotels.html" class="btn btn-light btn-lg mt-3">
+                                        <i class="bi bi-search"></i> Find a Table </a>
+                                </div>
+                                <div class="col-lg-4 mt-4 mt-lg-0 text-center"> <i
+                                        class="bi bi-calendar2-check-fill display-1"> </i> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="bg-primary text-white">
+                        <div class="container py-5">
+                            <div class="px-5 row align-items-center text-center text-lg-start">
+                                <div class="col-lg-8"> <span class="badge bg-light text-primary fs-6 mb-3"> <i
+                                            class="bi bi-clock"></i>
+                                        No More Waiting </span>
+                                    <h2 class="display-3 fw-bold"> Your Table. <br> Ready When You Arrive. </h2>
+                                    <p class="lead mt-3"> Popular hotels get crowded. Book your table before reaching
+                                        the
+                                        restaurant and save your time. </p> <a href="hotels.html"
+                                        class="btn btn-light btn-lg mt-3"> Explore Hotels <i
+                                            class="bi bi-arrow-right"></i> </a>
+                                </div>
+                                <div class="col-lg-4 mt-4 mt-lg-0 text-center"> <i
+                                        class="bi bi-hourglass-split display-1">
+                                    </i> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="bg-success text-white">
+                        <div class="container py-5">
+                            <div class="px-5 row align-items-center text-center text-lg-start">
+                                <div class="col-lg-8"> <span class="badge bg-light text-success fs-6 mb-3"> <i
+                                            class="bi bi-check-circle-fill"></i> Easy & Convenient </span>
+                                    <h2 class="display-3 fw-bold"> Choose Your Table <br> & Enjoy Your Meal </h2>
+                                    <p class="lead mt-3"> Select your date, time, number of guests and preferred table
+                                        in
+                                        just a few clicks. </p> <a href="hotels.html" class="btn btn-light btn-lg mt-3">
+                                        Start Booking <i class="bi bi-arrow-right"></i> </a>
+                                </div>
+                                <div class="col-lg-4 mt-4 mt-lg-0 text-center"> <i class="bi bi-people-fill display-1">
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Previous Button -->
+            <button class="  carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"> </span> <span class="visually-hidden">
+                    Previous
+                </span>
+            </button>
+            <!-- Next Button -->
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"> </span> <span class="visually-hidden"> Next
+                </span>
+            </button>
+
+        </div>
+
+    </section>
+    <!-- Hero Carousel section end -->
+
+
+
+    <section>
+        <div class="container py-5">
+            <div class="card shadow border-0">
+                <div class="card-body mx-2">
+                    <div class="text-center">
+                        <h2 class="fw-bold">Find Your Perfect Table</h2>
+                        <p class="text-muted">Choose your location, data, time and number of guests to find available
+                            tables</p>
+                    </div>
+
+
+                    <div class="col-12 text-center mt-2">
+                       <a href="./hotels.html"> <button class="btn btn-secondary px-5 btn-lg"><i class="bi bi-search"></i> Search
+                            Available Tables</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Popular Hotels Section -->
+    <section class="py-5 bg-light">
+
+        <div class="container">
+
+            <!-- Section Heading -->
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold display-6">
+                    Popular Hotels
+                </h2>
+
+                <p class="text-muted">
+                    Discover popular places and reserve your table
+                    before you arrive.
+                </p>
+
+            </div>
+
+
+            <!-- Hotel Cards -->
+
+            <div class="row g-4">
+
+
+                <!-- Hotel 1 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <!-- Image -->
+
+                        <div class="text-center bg-secondary-subtle ">
+
+                            <img src="https://giftvouchers.alvearhotels.com/images/servicios/16-LORANGERIE-689.jpg"
+                                class="card-img-top" alt="Hotel restaurant dining area" height="300px">
+
+                        </div>
+
+
+                        <!-- Card Body -->
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between
+                                    align-items-center">
+
+                                <h5 class="card-title fw-bold mb-0">
+                                    The Grand Palace
+                                </h5>
+
+                                <span class="badge text-bg-warning">
+                                    ⭐ 4.8
+                                </span>
+
+                            </div>
+
+
+                            <p class="text-muted mt-2">
+
+                                <i class="bi bi-geo-alt-fill"></i>
+                                Koregaon Park, Pune
+
+                            </p>
+
+
+                            <p class="card-text">
+
+                                Premium dining experience with
+                                Indian, Chinese and Continental cuisine.
+
+                            </p>
+
+
+                            <div class="text-center">
+
+
+
+                                <a href="hotel-details.html?id=1" class="btn btn-outline-primary">
+
+                                    View Hotel
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Hotel 2 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <div class="text-center bg-secondary-subtle">
+
+                            <img src="https://img-diva.vecernji.hr/cA3LnvVCQSIu0FfEmkVQYY9QBro%3D/720x0/smart/media/images/2022-19/brioni-vip-dining-7-2.jpg"
+                                class="card-img-top" alt="Luxury restaurant interior" height="300px">
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between
+                                    align-items-center">
+
+                                <h5 class="card-title fw-bold mb-0">
+                                    Royal Garden
+                                </h5>
+
+                                <span class="badge text-bg-warning">
+                                    ⭐ 4.6
+                                </span>
+
+                            </div>
+
+
+                            <p class="text-muted mt-2">
+
+                                <i class="bi bi-geo-alt-fill"></i>
+                                Baner, Pune
+
+                            </p>
+
+
+                            <p class="card-text">
+
+                                Authentic Indian and Maharashtrian
+                                cuisine in a beautiful dining environment.
+
+                            </p>
+
+
+
+                            <div class="text-center">
+
+                                <a href="hotel-details.html?id=2" class="btn btn-outline-primary">
+
+                                    View Hotel
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Hotel 3 -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <div class="text-center bg-secondary-subtle">
+
+                            <img src="https://www.uniqhotels.com/media/hotels/25/5.%20print_brunello-restaurant-b-kempinskipalm.jpg"
+                                class="card-img-top" alt="Elegant hotel dining room" height="300px">
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between
+                                    align-items-center">
+
+                                <h5 class="card-title fw-bold mb-0">
+                                    Food Paradise
+                                </h5>
+
+                                <span class="badge text-bg-warning">
+                                    ⭐ 4.7
+                                </span>
+
+                            </div>
+
+
+                            <p class="text-muted mt-2">
+
+                                <i class="bi bi-geo-alt-fill"></i>
+                                Viman Nagar, Pune
+
+                            </p>
+
+
+                            <p class="card-text">
+
+                                A modern dining destination perfect
+                                for families and friends.
+
+                            </p>
+
+
+
+                            <div class="text-center">
+
+                                <a href="hotel-details.html?id=3" class="btn btn-outline-primary">
+
+                                    View Hotel
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- View All Hotels -->
+
+            <div class="text-center mt-5">
+
+                <a href="hotels.html" class="btn btn-primary">
+
+                    View All Hotels
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- How It Works Section -->
+    <section class="py-5">
+
+        <div class="container">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold display-6">
+                    How It Works
+                </h2>
+
+                <p class="text-muted">
+                    Book your table in just three simple steps.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Step 1 -->
+                <div class="col-md-4">
+
+                    <div class="card h-100 border-0 shadow-sm text-center">
+
+                        <div class="card-body p-4">
+
+                            <div class="mb-3">
+                                <i class="bi bi-search display-4 text-primary"></i>
+                            </div>
+
+                            <h4 class="fw-bold">
+                                Search a Hotel
+                            </h4>
+
+                            <p class="text-muted">
+                                Choose your location, date, time and
+                                number of guests to find the perfect hotel.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-md-4">
+
+                    <div class="card h-100 border-0 shadow-sm text-center">
+
+                        <div class="card-body p-4">
+
+                            <div class="mb-3">
+                                <i class="bi bi-grid-3x3-gap-fill display-4 text-success"></i>
+                            </div>
+
+                            <h4 class="fw-bold">
+                                Choose Your Table
+                            </h4>
+
+                            <p class="text-muted">
+                                View available tables and choose the one
+                                that best suits your needs.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-md-4">
+
+                    <div class="card h-100 border-0 shadow-sm text-center">
+
+                        <div class="card-body p-4">
+
+                            <div class="mb-3">
+                                <i class="bi bi-calendar-check-fill display-4 text-warning"></i>
+                            </div>
+
+                            <h4 class="fw-bold">
+                                Confirm Booking
+                            </h4>
+
+                            <p class="text-muted">
+                                Confirm your reservation and arrive at the
+                                hotel with your table ready.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Why Choose TableBook Section -->
+    <section class="py-5 bg-light">
+
+        <div class="container">
+
+            <!-- Section Heading -->
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold display-6">
+                    Why Choose TableBook?
+                </h2>
+
+                <p class="text-muted">
+                    Enjoy a simple, fast and convenient way to reserve your table.
+                </p>
+
+            </div>
+
+            <!-- Features -->
+            <div class="row g-4">
+
+                <!-- Feature 1 -->
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card h-100 border-0 shadow-sm text-center">
+
+                        <div class="card-body p-4">
+
+                            <div class="mb-3">
+                                <i class="bi bi-lightning-fill display-4 text-primary"></i>
+                            </div>
+
+                            <h5 class="fw-bold">
+                                Easy & Fast Booking
+                            </h5>
+
+                            <p class="text-muted mb-0">
+                                Reserve your table quickly with our
+                                simple and easy booking process.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card h-100 border-0 shadow-sm text-center">
+
+                        <div class="card-body p-4">
+
+                            <div class="mb-3">
+                                <i class="bi bi-hourglass-split display-4 text-success"></i>
+                            </div>
+
+                            <h5 class="fw-bold">
+                                No Waiting
+                            </h5>
+
+                            <p class="text-muted mb-0">
+                                Reserve your table in advance and
+                                avoid long waiting times at busy hotels.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card h-100 border-0 shadow-sm text-center">
+
+                        <div class="card-body p-4">
+
+                            <div class="mb-3">
+                                <i class="bi bi-shield-lock-fill display-4 text-warning"></i>
+                            </div>
+
+                            <h5 class="fw-bold">
+                                Secure Reservations
+                            </h5>
+
+                            <p class="text-muted mb-0">
+                                Your booking details are handled safely
+                                and securely.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="card h-100 border-0 shadow-sm text-center">
+
+                        <div class="card-body p-4">
+
+                            <div class="mb-3">
+                                <i class="bi bi-phone-fill display-4 text-danger"></i>
+                            </div>
+
+                            <h5 class="fw-bold">
+                                Book Anytime
+                            </h5>
+
+                            <p class="text-muted mb-0">
+                                Make your table reservation anytime,
+                                from anywhere, using TableBook.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-secondary text-white">
+
+        <div class="container">
+
+            <div class="text-center">
+
+                <h2 class="fw-bold display-6">
+                    Ready to Book Your Table?
+                </h2>
+
+                <p class="lead mb-4">
+                    Skip the waiting and enjoy your dining experience
+                    with TableBook.
+                </p>
+
+                <a href="hotels.html" class="btn btn-light btn-lg px-5">
+                    <i class="bi bi-calendar-check-fill"></i>
+                    Book Your Table
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- Brand -->
+                <div class="col-md-6 col-lg-4">
+
+                    <h4 class="fw-bold">
+                        <i class="bi bi-calendar-check-fill text-white"></i>
+                        TableBook
+                    </h4>
+
+                    <p class="text-secondary">
+                        Book your table before you arrive and
+                        enjoy a hassle-free dining experience.
+                    </p>
+
+                </div>
+
+
+                <!-- Quick Links -->
+                <div class="col-md-6 col-lg-4">
+
+                    <h5 class="fw-bold">
+                        Quick Links
+                    </h5>
+
+                    <ul class="list-unstyled">
+
+                        <li class="mb-2">
+                            <a href="index.html" class="text-secondary text-decoration-none">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="hotels.html" class="text-secondary text-decoration-none">
+                                Hotels
+                            </a>
+                        </li>
+
+                        <li class="mb-2">
+                            <a href="my-bookings.html" class="text-secondary text-decoration-none">
+                                My Bookings
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="about.html" class="text-secondary text-decoration-none">
+                                About
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Contact -->
+                <div class="col-md-6 col-lg-4">
+
+                    <h5 class="fw-bold">
+                        Contact Us
+                    </h5>
+
+                    <p class="text-secondary mb-2">
+                        <i class="bi bi-envelope-fill"></i>
+                        support@tablebook.com
+                    </p>
+
+                    <p class="text-secondary mb-2">
+                        <i class="bi bi-telephone-fill"></i>
+                        +91 98765 43210
+                    </p>
+
+                    <p class="text-secondary">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        Pune, Maharashtra
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <hr class="border-secondary my-4">
+
+
+            <!-- Copyright -->
+
+            <div class="text-center text-secondary">
+
+                <p class="mb-0">
+                    © 2026 TableBook. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
